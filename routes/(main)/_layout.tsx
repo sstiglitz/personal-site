@@ -2,9 +2,9 @@ import type { PageProps } from '$fresh/server.ts'
 
 export default ({ Component }: PageProps) => {
   const navigation = [
-    // { name: 'blog', href: '/blog' },
-    { name: 'about', href: '/md/about' },
-    { name: 'contact', href: '/md/contact' },
+    { name: 'blog', href: '/blog' },
+    { name: 'about', href: '/about' },
+    { name: 'contact', href: '/contact' },
   ]
 
   return (

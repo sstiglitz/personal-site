@@ -5,7 +5,6 @@ import { render } from "$gfm";
 import { Head } from "$fresh/runtime.ts"
 
 interface Page {
-  slug: string
   attrs: Record<string, unknown>
   body: string
 }
@@ -13,7 +12,7 @@ interface Page {
 export const handler: Handlers<Page> = {
   async GET(_req: Request, ctx: FreshContext) {
     let rawMarkdown = ""
-    const filepath = `routes/(main)/md/${ctx.params.slug}.md`
+    const filepath = `routes/(main)/${ctx.params.slug}.md`
 
     try {
       rawMarkdown = await Deno.readTextFile(filepath)
@@ -27,7 +26,7 @@ export const handler: Handlers<Page> = {
     }
 
     const { attrs, body } = test(rawMarkdown) ? extract(rawMarkdown) : {attrs: undefined, body: undefined}
-    return ctx.render({slug: ctx.params.slug, attrs, body })
+    return ctx.render({ attrs, body })
   }
 }
 
