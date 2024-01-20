@@ -1,5 +1,3 @@
-@import url("pico.min.css");
-
 [data-theme='light'],
 :root:not([data-theme='dark']) {
   --pico-primary: #00b1ed;

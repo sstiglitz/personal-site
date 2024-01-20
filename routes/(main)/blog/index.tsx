@@ -1,4 +1,4 @@
-import type { Handlers, PageProps, FreshContext } from '$fresh/server.ts'
+import type { FreshContext, Handlers, PageProps } from '$fresh/server.ts'
 import { extract } from '$std/front_matter/any.ts'
 import { Head } from '$fresh/runtime.ts'
 

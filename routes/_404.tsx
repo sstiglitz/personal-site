@@ -1,4 +1,4 @@
-import { Head } from "$fresh/runtime.ts";
+import { Head } from '$fresh/runtime.ts'
 
 export default function Error404() {
   return (
@@ -7,7 +7,7 @@ export default function Error404() {
         <title>404 - Page not found</title>
       </Head>
       <p>The page you were looking for doesn't exist.</p>
-      <a href="/">Go back home</a>
+      <a href='/'>Go back home</a>
     </>
-  );
+  )
 }
